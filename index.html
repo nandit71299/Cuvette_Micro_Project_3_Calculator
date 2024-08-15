@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="flex-container">
+        <div class="calc-display">
+          <h2 id="result">0</h2>
+        </div>
+        <div class="calc-keys">
+          <button onclick="handleClick(event)" value="7">7</button>
+          <button onclick="handleClick(event)" value="8">8</button>
+          <button onclick="handleClick(event)" value="9">9</button>
+          <button onclick="handleClick(event)" data-action="del">DEL</button>
+          <button onclick="handleClick(event)" value="4">4</button>
+          <button onclick="handleClick(event)" value="5">5</button>
+          <button onclick="handleClick(event)" value="6">6</button>
+          <button onclick="handleClick(event)" data-action="plus">+</button>
+          <button onclick="handleClick(event)" value="1">1</button>
+          <button onclick="handleClick(event)" value="2">2</button>
+          <button onclick="handleClick(event)" value="3">3</button>
+          <button onclick="handleClick(event)" data-action="minus">-</button>
+          <button onclick="handleClick(event)" value=".">.</button>
+          <button onclick="handleClick(event)" value="0">0</button>
+          <button onclick="handleClick(event)" data-action="divide">/</button>
+          <button onclick="handleClick(event)" data-action="multiply">x</button>
+        </div>
+        <div class="buttons">
+          <button
+            class="reset-button"
+            onclick="handleClick(event)"
+            data-action="reset"
+          >
+            Reset
+          </button>
+          <button
+            class="submit-button"
+            onclick="handleClick(event)"
+            data-action="equals"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
