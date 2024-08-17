@@ -9,15 +9,19 @@ let operator = ""; // Operator Value
 function handleClick(event) {
   const action = event.target.dataset.action;
   const value = event.target.value;
-
   if (!action) {
     if (value === "0" && cVal === "0") {
       return;
     } else if (value === "." && cVal.includes(".")) {
       return;
     } else {
-      cVal += value;
-      result.innerHTML = cVal;
+      if (result.innerHTML == "0") {
+        cVal = value;
+        result.innerHTML = cVal;
+      } else {
+        cVal += value;
+        result.innerHTML = cVal;
+      }
     }
   } else {
     switch (action) {
